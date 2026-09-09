@@ -1,0 +1,8 @@
+{
+    "Name": "Steam",
+    "Description": "IceBox Storefront Plugin - Steamworks integration for IceBox Engine. Exposes the `Storefront` Lua API: achievements, stats, leaderboards, cloud saves, friends, rich presence, overlay, lobbies, P2P networking, voice, Workshop (create/update/query), DLC, auth tickets, screenshots, Steam Timeline, and Steam Input / Steam Deck / Steam Machine / Steam Frame support. Windows, Linux and macOS. Reads its AppId from steam_config.json in this folder or from the ICEBOX_STEAM_APPID environment variable. The Steamworks SDK is not included: download it from Valve and place the Steam runtime library beside this plugin. Not affiliated with or endorsed by Valve Corporation.",
+    "Author": "IceBoxCrew",
+    "Version": "1.0.0",
+    "Icon": "icon.png",
+    "Dependencies": []
+}

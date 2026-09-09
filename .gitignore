@@ -1,0 +1,45 @@
+# The public repository carries the plugin folder WITHOUT the compiled library.
+# Binaries are attached to GitHub Releases and to itch.io, one archive per
+# platform and per engine version. Nothing here is ever built from source: the
+# source code is not published. See README.md.
+
+# --- The plugin's own compiled libraries -----------------------------------
+# They belong in a Release, not in git history. Delete these four lines if you
+# ever decide to version them instead.
+Steam.dll
+Steam.so
+Steam.dylib
+libSteam.so
+libSteam.dylib
+
+# --- Valve's files. These must NEVER be committed anywhere. -----------------
+# The Steamworks SDK is licensed to each developer personally and
+# nontransferably. See NOTICE.md and Section 5 of LICENSE.txt.
+steam_api*
+libsteam_api*
+sdkencryptedappticket*
+steamclient*
+tier0_s.*
+vstdlib_s.*
+redistributable_bin/
+public/
+sdk/
+
+# --- Per-developer configuration. Never ours to publish. -------------------
+steam_config.json
+steam_appid.txt
+
+# --- Debris ----------------------------------------------------------------
+*.pdb
+*.obj
+*.o
+*.exp
+*.ilk
+out/
+build/
+__pycache__/
+.vs/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

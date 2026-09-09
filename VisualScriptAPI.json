@@ -1,0 +1,3258 @@
+{
+ "version": 1,
+ "functions": [
+  {
+   "name": "GetAppId",
+   "call": "Storefront.GetAppId",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get App Id",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetAppInstallDir",
+   "call": "Storefront.GetAppInstallDir",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get App Install Dir",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetAppOwner",
+   "call": "Storefront.GetAppOwner",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get App Owner",
+   "pure": true,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "GetBackend",
+   "call": "Storefront.GetBackend",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Backend",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetBackendId",
+   "call": "Storefront.GetBackendId",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Backend Id",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetBuildId",
+   "call": "Storefront.GetBuildId",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Build Id",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetCountryCode",
+   "call": "Storefront.GetCountryCode",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Country Code",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetCurrentBetaName",
+   "call": "Storefront.GetCurrentBetaName",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Current Beta Name",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetImageRGBA",
+   "call": "Storefront.GetImageRGBA",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Image RGBA",
+   "pure": false,
+   "args": [
+    {
+     "name": "handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Data",
+     "type": "String"
+    },
+    {
+     "name": "Width",
+     "type": "Int"
+    },
+    {
+     "name": "Height",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "GetLanguage",
+   "call": "Storefront.GetLanguage",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Language",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetLaunchCommandLine",
+   "call": "Storefront.GetLaunchCommandLine",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Launch Command Line",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetLaunchQueryParam",
+   "call": "Storefront.GetLaunchQueryParam",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Launch Query Param",
+   "pure": true,
+   "args": [
+    {
+     "name": "Key",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "GetLocalUser",
+   "call": "Storefront.GetLocalUser",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Local User",
+   "pure": true,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "GetPersonaName",
+   "call": "Storefront.GetPersonaName",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Persona Name",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "GetSecondsSinceAppActive",
+   "call": "Storefront.GetSecondsSinceAppActive",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Seconds Since App Active",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetServerRealTime",
+   "call": "Storefront.GetServerRealTime",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Server Real Time",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "IsAvailable",
+   "call": "Storefront.IsAvailable",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Available",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsInitialized",
+   "call": "Storefront.IsInitialized",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Initialized",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsLoggedIn",
+   "call": "Storefront.IsLoggedIn",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Logged In",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsLowViolence",
+   "call": "Storefront.IsLowViolence",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Low Violence",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSubscribed",
+   "call": "Storefront.IsSubscribed",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Subscribed",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSubscribedFromFamilySharing",
+   "call": "Storefront.IsSubscribedFromFamilySharing",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Subscribed From Family Sharing",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSubscribedFromFreeWeekend",
+   "call": "Storefront.IsSubscribedFromFreeWeekend",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Subscribed From Free Weekend",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsVACBanned",
+   "call": "Storefront.IsVACBanned",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is VAC Banned",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "RestartAppIfNecessary",
+   "call": "Storefront.RestartAppIfNecessary",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Restart App If Necessary",
+   "pure": false,
+   "args": [
+    {
+     "name": "appId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "ResultName",
+   "call": "Storefront.ResultName",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Result Name",
+   "pure": true,
+   "args": [
+    {
+     "name": "r",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.Result.Ok",
+      "Storefront.Result.Pending",
+      "Storefront.Result.NotInitialized",
+      "Storefront.Result.NotLoggedIn",
+      "Storefront.Result.NotFound",
+      "Storefront.Result.AlreadyExists",
+      "Storefront.Result.InvalidArgument",
+      "Storefront.Result.PermissionDenied",
+      "Storefront.Result.NetworkFailure",
+      "Storefront.Result.QuotaExceeded",
+      "Storefront.Result.Timeout",
+      "Storefront.Result.Cancelled",
+      "Storefront.Result.Unsupported",
+      "Storefront.Result.DuplicateRequest",
+      "Storefront.Result.BackendError"
+     ],
+     "default": "Storefront.Result.Ok"
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "TriggerScreenshot",
+   "call": "Storefront.TriggerScreenshot",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Trigger Screenshot",
+   "pure": false,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "ClearAchievement",
+   "call": "Storefront.ClearAchievement",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Clear Achievement",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetAchievement",
+   "call": "Storefront.GetAchievement",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Get Achievement",
+   "pure": true,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Any"
+  },
+  {
+   "name": "GetAchievementIcon",
+   "call": "Storefront.GetAchievementIcon",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Get Achievement Icon",
+   "pure": true,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetAchievementIconRGBA",
+   "call": "Storefront.GetAchievementIconRGBA",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Get Achievement Icon RGBA",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Data",
+     "type": "String"
+    },
+    {
+     "name": "Width",
+     "type": "Int"
+    },
+    {
+     "name": "Height",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "GetAllAchievements",
+   "call": "Storefront.GetAllAchievements",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Get All Achievements",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "IndicateAchievementProgress",
+   "call": "Storefront.IndicateAchievementProgress",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Indicate Achievement Progress",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "Current",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Max",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "RequestGlobalAchievementPercentages",
+   "call": "Storefront.RequestGlobalAchievementPercentages",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Request Global Achievement Percentages",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "UnlockAchievement",
+   "call": "Storefront.UnlockAchievement",
+   "surface": "any",
+   "category": "Steam Achievements",
+   "title": "Unlock Achievement",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "BeginAuthSession",
+   "call": "Storefront.BeginAuthSession",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "Begin Auth Session",
+   "pure": false,
+   "args": [
+    {
+     "name": "ticket",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "user",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "CancelAuthSessionTicket",
+   "call": "Storefront.CancelAuthSessionTicket",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "Cancel Auth Session Ticket",
+   "pure": false,
+   "args": [
+    {
+     "name": "Ticket",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "EndAuthSession",
+   "call": "Storefront.EndAuthSession",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "End Auth Session",
+   "pure": false,
+   "args": [
+    {
+     "name": "user",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "RequestAuthSessionTicket",
+   "call": "Storefront.RequestAuthSessionTicket",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "Request Auth Session Ticket",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "RequestEncryptedAppTicket",
+   "call": "Storefront.RequestEncryptedAppTicket",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "Request Encrypted App Ticket",
+   "pure": false,
+   "args": [
+    {
+     "name": "userData",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "RequestWebApiAuthTicket",
+   "call": "Storefront.RequestWebApiAuthTicket",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "Request Web Api Auth Ticket",
+   "pure": false,
+   "args": [
+    {
+     "name": "identity",
+     "type": "String",
+     "opt": true
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "UserHasLicenseForApp",
+   "call": "Storefront.UserHasLicenseForApp",
+   "surface": "any",
+   "category": "Steam Auth",
+   "title": "User Has License For App",
+   "pure": false,
+   "args": [
+    {
+     "name": "user",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "appId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "CloudDelete",
+   "call": "Storefront.CloudDelete",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Delete",
+   "pure": false,
+   "args": [
+    {
+     "name": "name",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "CloudIsEnabled",
+   "call": "Storefront.CloudIsEnabled",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Is Enabled",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "CloudList",
+   "call": "Storefront.CloudList",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud List",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "CloudQuotaAvailable",
+   "call": "Storefront.CloudQuotaAvailable",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Quota Available",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "CloudQuotaTotal",
+   "call": "Storefront.CloudQuotaTotal",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Quota Total",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "CloudRead",
+   "call": "Storefront.CloudRead",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Read",
+   "pure": false,
+   "args": [
+    {
+     "name": "name",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Data",
+     "type": "String"
+    },
+    {
+     "name": "Result",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "CloudWrite",
+   "call": "Storefront.CloudWrite",
+   "surface": "any",
+   "category": "Steam Cloud",
+   "title": "Cloud Write",
+   "pure": false,
+   "args": [
+    {
+     "name": "name",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "data",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetDLCs",
+   "call": "Storefront.GetDLCs",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Get DLCs",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "InstallDLC",
+   "call": "Storefront.InstallDLC",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Install DLC",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "IsDLCInstalled",
+   "call": "Storefront.IsDLCInstalled",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Is DLC Installed",
+   "pure": true,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "OpenStorePage",
+   "call": "Storefront.OpenStorePage",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Open Store Page",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "RequestPurchase",
+   "call": "Storefront.RequestPurchase",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Request Purchase",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "UninstallDLC",
+   "call": "Storefront.UninstallDLC",
+   "surface": "any",
+   "category": "Steam DLC",
+   "title": "Uninstall DLC",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "DismissFloatingGamepadTextInput",
+   "call": "Storefront.DismissFloatingGamepadTextInput",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Dismiss Floating Gamepad Text Input",
+   "pure": false,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "DismissGamepadTextInput",
+   "call": "Storefront.DismissGamepadTextInput",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Dismiss Gamepad Text Input",
+   "pure": false,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "GetBatteryPower",
+   "call": "Storefront.GetBatteryPower",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Get Battery Power",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetEnteredGamepadText",
+   "call": "Storefront.GetEnteredGamepadText",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Get Entered Gamepad Text",
+   "pure": false,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "GetHardwareDefaultConfig",
+   "call": "Storefront.GetHardwareDefaultConfig",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Get Hardware Default Config",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetSteamHardware",
+   "call": "Storefront.GetSteamHardware",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Get Steam Hardware",
+   "pure": true,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetSteamUILanguage",
+   "call": "Storefront.GetSteamUILanguage",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Get Steam UI Language",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
+   "name": "IsBigPictureMode",
+   "call": "Storefront.IsBigPictureMode",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Big Picture Mode",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsRunningInVR",
+   "call": "Storefront.IsRunningInVR",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Running In VR",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsRunningUnderProton",
+   "call": "Storefront.IsRunningUnderProton",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Running Under Proton",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSteamDeck",
+   "call": "Storefront.IsSteamDeck",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Steam Deck",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSteamFrame",
+   "call": "Storefront.IsSteamFrame",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Steam Frame",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSteamMachine",
+   "call": "Storefront.IsSteamMachine",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Is Steam Machine",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "SetGamePerformanceSetting",
+   "call": "Storefront.SetGamePerformanceSetting",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Set Game Performance Setting",
+   "pure": false,
+   "args": [
+    {
+     "name": "setting",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetGameRenderResolution",
+   "call": "Storefront.SetGameRenderResolution",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Set Game Render Resolution",
+   "pure": false,
+   "args": [
+    {
+     "name": "width",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "height",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "ShowFloatingGamepadTextInput",
+   "call": "Storefront.ShowFloatingGamepadTextInput",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Show Floating Gamepad Text Input",
+   "pure": false,
+   "args": [
+    {
+     "name": "mode",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.FloatingKeyboardMode.SingleLine",
+      "Storefront.FloatingKeyboardMode.MultipleLines",
+      "Storefront.FloatingKeyboardMode.Email",
+      "Storefront.FloatingKeyboardMode.Numeric"
+     ],
+     "default": "Storefront.FloatingKeyboardMode.SingleLine"
+    },
+    {
+     "name": "x",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "y",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "w",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "h",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "ShowGamepadTextInput",
+   "call": "Storefront.ShowGamepadTextInput",
+   "surface": "any",
+   "category": "Steam Device",
+   "title": "Show Gamepad Text Input",
+   "pure": false,
+   "args": [
+    {
+     "name": "desc",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "existing",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "maxChars",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "OnAchievementUnlocked",
+   "call": "Storefront.OnAchievementUnlocked",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Achievement Unlocked",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnAuthSessionValidated",
+   "call": "Storefront.OnAuthSessionValidated",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Auth Session Validated",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnConnectInvite",
+   "call": "Storefront.OnConnectInvite",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Connect Invite",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnLobbyChat",
+   "call": "Storefront.OnLobbyChat",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Lobby Chat",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnLobbyMemberChanged",
+   "call": "Storefront.OnLobbyMemberChanged",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Lobby Member Changed",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnOverlayActivated",
+   "call": "Storefront.OnOverlayActivated",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On Overlay Activated",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OnP2PMessage",
+   "call": "Storefront.OnP2PMessage",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "On P2P Message",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetLogSink",
+   "call": "Storefront.SetLogSink",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "Set Log Sink",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "Tick",
+   "call": "Storefront.Tick",
+   "surface": "any",
+   "category": "Steam Events",
+   "title": "Tick",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "ClearRichPresence",
+   "call": "Storefront.ClearRichPresence",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Clear Rich Presence",
+   "pure": false,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "GetFriendAvatar",
+   "call": "Storefront.GetFriendAvatar",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Get Friend Avatar",
+   "pure": true,
+   "args": [
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "size",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetFriendAvatarRGBA",
+   "call": "Storefront.GetFriendAvatarRGBA",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Get Friend Avatar RGBA",
+   "pure": false,
+   "args": [
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "size",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Data",
+     "type": "String"
+    },
+    {
+     "name": "Width",
+     "type": "Int"
+    },
+    {
+     "name": "Height",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "GetFriends",
+   "call": "Storefront.GetFriends",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Get Friends",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "GetPendingConnect",
+   "call": "Storefront.GetPendingConnect",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Get Pending Connect",
+   "pure": true,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "PeekPendingConnect",
+   "call": "Storefront.PeekPendingConnect",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Peek Pending Connect",
+   "pure": false,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "SetRichPresence",
+   "call": "Storefront.SetRichPresence",
+   "surface": "any",
+   "category": "Steam Friends",
+   "title": "Set Rich Presence",
+   "pure": false,
+   "args": [
+    {
+     "name": "Presence",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateActionSet",
+   "call": "Storefront.Input.ActivateActionSet",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Activate Action Set",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "set",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "ActivateActionSetLayer",
+   "call": "Storefront.Input.ActivateActionSetLayer",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Activate Action Set Layer",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "layer",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "DeactivateActionSetLayer",
+   "call": "Storefront.Input.DeactivateActionSetLayer",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Deactivate Action Set Layer",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "layer",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "DeactivateAllActionSetLayers",
+   "call": "Storefront.Input.DeactivateAllActionSetLayers",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Deactivate All Action Set Layers",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "GetActionSetHandle",
+   "call": "Storefront.Input.GetActionSetHandle",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Action Set Handle",
+   "pure": true,
+   "args": [
+    {
+     "name": "Name",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetAnalogActionData",
+   "call": "Storefront.Input.GetAnalogActionData",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Analog Action Data",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "action",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "GetAnalogActionHandle",
+   "call": "Storefront.Input.GetAnalogActionHandle",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Analog Action Handle",
+   "pure": true,
+   "args": [
+    {
+     "name": "Name",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetAnalogActionOrigins",
+   "call": "Storefront.Input.GetAnalogActionOrigins",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Analog Action Origins",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "set",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "action",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "GetControllerForGamepadIndex",
+   "call": "Storefront.Input.GetControllerForGamepadIndex",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Controller For Gamepad Index",
+   "pure": true,
+   "args": [
+    {
+     "name": "Index",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetControllers",
+   "call": "Storefront.Input.GetControllers",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Controllers",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "GetCurrentActionSet",
+   "call": "Storefront.Input.GetCurrentActionSet",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Current Action Set",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetDigitalActionData",
+   "call": "Storefront.Input.GetDigitalActionData",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Digital Action Data",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "action",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "GetDigitalActionHandle",
+   "call": "Storefront.Input.GetDigitalActionHandle",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Digital Action Handle",
+   "pure": true,
+   "args": [
+    {
+     "name": "Name",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetDigitalActionOrigins",
+   "call": "Storefront.Input.GetDigitalActionOrigins",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Digital Action Origins",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "set",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "action",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "GetGamepadIndexForController",
+   "call": "Storefront.Input.GetGamepadIndexForController",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Gamepad Index For Controller",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetGlyphPNGForActionOrigin",
+   "call": "Storefront.Input.GetGlyphPNGForActionOrigin",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Glyph PNG For Action Origin",
+   "pure": true,
+   "args": [
+    {
+     "name": "origin",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "size",
+     "type": "Int",
+     "opt": true
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "GetGlyphSVGForActionOrigin",
+   "call": "Storefront.Input.GetGlyphSVGForActionOrigin",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Glyph SVG For Action Origin",
+   "pure": true,
+   "args": [
+    {
+     "name": "origin",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "GetInputTypeForHandle",
+   "call": "Storefront.Input.GetInputTypeForHandle",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get Input Type For Handle",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetStringForActionOrigin",
+   "call": "Storefront.Input.GetStringForActionOrigin",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Get String For Action Origin",
+   "pure": true,
+   "args": [
+    {
+     "name": "origin",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "Init",
+   "call": "Storefront.Input.Init",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Init",
+   "pure": false,
+   "args": [
+    {
+     "name": "manifest",
+     "type": "String",
+     "opt": true
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsSteamDeckController",
+   "call": "Storefront.Input.IsSteamDeckController",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Is Steam Deck Controller",
+   "pure": true,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "RunFrame",
+   "call": "Storefront.Input.RunFrame",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Run Frame",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "SetActionManifestFilePath",
+   "call": "Storefront.Input.SetActionManifestFilePath",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Set Action Manifest File Path",
+   "pure": false,
+   "args": [
+    {
+     "name": "Path",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "SetLEDColor",
+   "call": "Storefront.Input.SetLEDColor",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Set LED Color",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "r",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "g",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "b",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "ShowBindingPanel",
+   "call": "Storefront.Input.ShowBindingPanel",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Show Binding Panel",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Bool"
+  },
+  {
+   "name": "Shutdown",
+   "call": "Storefront.Input.Shutdown",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Shutdown",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "StopAnalogActionMomentum",
+   "call": "Storefront.Input.StopAnalogActionMomentum",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Stop Analog Action Momentum",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "action",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "TriggerVibration",
+   "call": "Storefront.Input.TriggerVibration",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Trigger Vibration",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "left",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "right",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "TriggerVibrationExtended",
+   "call": "Storefront.Input.TriggerVibrationExtended",
+   "surface": "any",
+   "category": "Steam Input",
+   "title": "Input: Trigger Vibration Extended",
+   "pure": false,
+   "args": [
+    {
+     "name": "Handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Left",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Right",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "LeftTrigger",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "RightTrigger",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "DownloadLeaderboardEntries",
+   "call": "Storefront.DownloadLeaderboardEntries",
+   "surface": "any",
+   "category": "Steam Leaderboards",
+   "title": "Download Leaderboard Entries",
+   "pure": false,
+   "args": [
+    {
+     "name": "handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "range",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.LeaderboardRange.Global",
+      "Storefront.LeaderboardRange.AroundUser",
+      "Storefront.LeaderboardRange.Friends"
+     ],
+     "default": "Storefront.LeaderboardRange.Global"
+    },
+    {
+     "name": "RangeStart",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "RangeEnd",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "FindOrCreateLeaderboard",
+   "call": "Storefront.FindOrCreateLeaderboard",
+   "surface": "any",
+   "category": "Steam Leaderboards",
+   "title": "Find Or Create Leaderboard",
+   "pure": false,
+   "args": [
+    {
+     "name": "name",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "sort",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.LeaderboardSort.Ascending",
+      "Storefront.LeaderboardSort.Descending"
+     ],
+     "default": "Storefront.LeaderboardSort.Ascending"
+    },
+    {
+     "name": "display",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.LeaderboardDisplay.Numeric",
+      "Storefront.LeaderboardDisplay.TimeSeconds",
+      "Storefront.LeaderboardDisplay.TimeMilliSeconds"
+     ],
+     "default": "Storefront.LeaderboardDisplay.Numeric"
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "UploadLeaderboardScore",
+   "call": "Storefront.UploadLeaderboardScore",
+   "surface": "any",
+   "category": "Steam Leaderboards",
+   "title": "Upload Leaderboard Score",
+   "pure": false,
+   "args": [
+    {
+     "name": "handle",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "score",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Details",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "method",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.LeaderboardUpload.KeepBest",
+      "Storefront.LeaderboardUpload.ForceUpdate"
+     ],
+     "default": "Storefront.LeaderboardUpload.KeepBest"
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "CreateLobby",
+   "call": "Storefront.CreateLobby",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Create Lobby",
+   "pure": false,
+   "args": [
+    {
+     "name": "type",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.LobbyType.Private",
+      "Storefront.LobbyType.FriendsOnly",
+      "Storefront.LobbyType.Public",
+      "Storefront.LobbyType.Invisible"
+     ],
+     "default": "Storefront.LobbyType.Private"
+    },
+    {
+     "name": "max",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "GetLobbyData",
+   "call": "Storefront.GetLobbyData",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Get Lobby Data",
+   "pure": true,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Key",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "String"
+  },
+  {
+   "name": "GetLobbyMembers",
+   "call": "Storefront.GetLobbyMembers",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Get Lobby Members",
+   "pure": true,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "InviteFriendToLobby",
+   "call": "Storefront.InviteFriendToLobby",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Invite Friend To Lobby",
+   "pure": false,
+   "args": [
+    {
+     "name": "lobby",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "JoinLobby",
+   "call": "Storefront.JoinLobby",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Join Lobby",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "LeaveLobby",
+   "call": "Storefront.LeaveLobby",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Leave Lobby",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ParseConnectLobby",
+   "call": "Storefront.ParseConnectLobby",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Parse Connect Lobby",
+   "pure": false,
+   "args": [
+    {
+     "name": "connectString",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Any"
+  },
+  {
+   "name": "SearchLobbies",
+   "call": "Storefront.SearchLobbies",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Search Lobbies",
+   "pure": false,
+   "args": [
+    {
+     "name": "filter",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SendLobbyChat",
+   "call": "Storefront.SendLobbyChat",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Send Lobby Chat",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "data",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "SetLobbyData",
+   "call": "Storefront.SetLobbyData",
+   "surface": "any",
+   "category": "Steam Lobby",
+   "title": "Set Lobby Data",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Key",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "Value",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlay",
+   "call": "Storefront.ActivateOverlay",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay",
+   "pure": false,
+   "args": [
+    {
+     "name": "dialog",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlayInviteDialog",
+   "call": "Storefront.ActivateOverlayInviteDialog",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay Invite Dialog",
+   "pure": false,
+   "args": [
+    {
+     "name": "lobby",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlayInviteDialogConnectString",
+   "call": "Storefront.ActivateOverlayInviteDialogConnectString",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay Invite Dialog Connect String",
+   "pure": false,
+   "args": [
+    {
+     "name": "ConnectString",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlayToStore",
+   "call": "Storefront.ActivateOverlayToStore",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay To Store",
+   "pure": false,
+   "args": [
+    {
+     "name": "appId",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlayToUser",
+   "call": "Storefront.ActivateOverlayToUser",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay To User",
+   "pure": false,
+   "args": [
+    {
+     "name": "dialog",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateOverlayToWebPage",
+   "call": "Storefront.ActivateOverlayToWebPage",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Overlay To Web Page",
+   "pure": false,
+   "args": [
+    {
+     "name": "url",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ActivateRemotePlayTogetherInvite",
+   "call": "Storefront.ActivateRemotePlayTogetherInvite",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Activate Remote Play Together Invite",
+   "pure": false,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "SetOverlayNotificationInset",
+   "call": "Storefront.SetOverlayNotificationInset",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Set Overlay Notification Inset",
+   "pure": false,
+   "args": [
+    {
+     "name": "horizontal",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "vertical",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetOverlayNotificationPosition",
+   "call": "Storefront.SetOverlayNotificationPosition",
+   "surface": "any",
+   "category": "Steam Overlay",
+   "title": "Set Overlay Notification Position",
+   "pure": false,
+   "args": [
+    {
+     "name": "position",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "CloseP2PSession",
+   "call": "Storefront.CloseP2PSession",
+   "surface": "any",
+   "category": "Steam P2P",
+   "title": "Close P2P Session",
+   "pure": false,
+   "args": [
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ReceiveP2P",
+   "call": "Storefront.ReceiveP2P",
+   "surface": "any",
+   "category": "Steam P2P",
+   "title": "Receive P2P",
+   "pure": false,
+   "args": [],
+   "ret": "Any"
+  },
+  {
+   "name": "SendP2P",
+   "call": "Storefront.SendP2P",
+   "surface": "any",
+   "category": "Steam P2P",
+   "title": "Send P2P",
+   "pure": false,
+   "args": [
+    {
+     "name": "User",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "data",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "channel",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.P2PChannel.Default",
+      "Storefront.P2PChannel.GameState",
+      "Storefront.P2PChannel.Voice",
+      "Storefront.P2PChannel.FileTransfer"
+     ],
+     "default": "Storefront.P2PChannel.Default"
+    },
+    {
+     "name": "sendType",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.P2PSendType.Unreliable",
+      "Storefront.P2PSendType.UnreliableNoDelay",
+      "Storefront.P2PSendType.Reliable",
+      "Storefront.P2PSendType.ReliableWithBuffering"
+     ],
+     "default": "Storefront.P2PSendType.Unreliable"
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "AreStatsReady",
+   "call": "Storefront.AreStatsReady",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Are Stats Ready",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "GetStatFloat",
+   "call": "Storefront.GetStatFloat",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Get Stat Float",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Value",
+     "type": "Float"
+    },
+    {
+     "name": "Result",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "GetStatInt",
+   "call": "Storefront.GetStatInt",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Get Stat Int",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Value",
+     "type": "Int"
+    },
+    {
+     "name": "Result",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "RequestNumberOfCurrentPlayers",
+   "call": "Storefront.RequestNumberOfCurrentPlayers",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Request Number Of Current Players",
+   "pure": false,
+   "args": [
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "ResetAllStats",
+   "call": "Storefront.ResetAllStats",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Reset All Stats",
+   "pure": false,
+   "args": [
+    {
+     "name": "alsoAch",
+     "type": "Bool",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "SetStatFloat",
+   "call": "Storefront.SetStatFloat",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Set Stat Float",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "Value",
+     "type": "Float",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "SetStatInt",
+   "call": "Storefront.SetStatInt",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Set Stat Int",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "Value",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "StoreStats",
+   "call": "Storefront.StoreStats",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Store Stats",
+   "pure": false,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "UpdateAvgRateStat",
+   "call": "Storefront.UpdateAvgRateStat",
+   "surface": "any",
+   "category": "Steam Stats",
+   "title": "Update Avg Rate Stat",
+   "pure": false,
+   "args": [
+    {
+     "name": "id",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "count",
+     "type": "Float",
+     "opt": false
+    },
+    {
+     "name": "sessionLen",
+     "type": "Float",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "AddGamePhaseTag",
+   "call": "Storefront.Timeline.AddGamePhaseTag",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Add Game Phase Tag",
+   "pure": false,
+   "args": [
+    {
+     "name": "tagName",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "tagIcon",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "tagGroup",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "priority",
+     "type": "Int",
+     "opt": true
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "AddInstantaneousEvent",
+   "call": "Storefront.Timeline.AddInstantaneousEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Add Instantaneous Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "AddRangeEvent",
+   "call": "Storefront.Timeline.AddRangeEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Add Range Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "ClearTooltip",
+   "call": "Storefront.Timeline.ClearTooltip",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Clear Tooltip",
+   "pure": false,
+   "args": [
+    {
+     "name": "timeDelta",
+     "type": "Float",
+     "opt": true
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "EndGamePhase",
+   "call": "Storefront.Timeline.EndGamePhase",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: End Game Phase",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "EndRangeEvent",
+   "call": "Storefront.Timeline.EndRangeEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: End Range Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "event",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "endOffsetSeconds",
+     "type": "Float",
+     "opt": true
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "IsAvailable",
+   "call": "Storefront.Timeline.IsAvailable",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Is Available",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "OpenOverlayToEvent",
+   "call": "Storefront.Timeline.OpenOverlayToEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Open Overlay To Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "event",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "OpenOverlayToGamePhase",
+   "call": "Storefront.Timeline.OpenOverlayToGamePhase",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Open Overlay To Game Phase",
+   "pure": false,
+   "args": [
+    {
+     "name": "phaseId",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "RemoveEvent",
+   "call": "Storefront.Timeline.RemoveEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Remove Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "event",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetGameMode",
+   "call": "Storefront.Timeline.SetGameMode",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Set Game Mode",
+   "pure": false,
+   "args": [
+    {
+     "name": "mode",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetGamePhaseAttribute",
+   "call": "Storefront.Timeline.SetGamePhaseAttribute",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Set Game Phase Attribute",
+   "pure": false,
+   "args": [
+    {
+     "name": "attributeGroup",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "attributeValue",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "priority",
+     "type": "Int",
+     "opt": true
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetGamePhaseId",
+   "call": "Storefront.Timeline.SetGamePhaseId",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Set Game Phase Id",
+   "pure": false,
+   "args": [
+    {
+     "name": "phaseId",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetTooltip",
+   "call": "Storefront.Timeline.SetTooltip",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Set Tooltip",
+   "pure": false,
+   "args": [
+    {
+     "name": "description",
+     "type": "String",
+     "opt": false
+    },
+    {
+     "name": "timeDelta",
+     "type": "Float",
+     "opt": true
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "StartGamePhase",
+   "call": "Storefront.Timeline.StartGamePhase",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Start Game Phase",
+   "pure": false,
+   "args": [],
+   "ret": "void"
+  },
+  {
+   "name": "StartRangeEvent",
+   "call": "Storefront.Timeline.StartRangeEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Start Range Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "UpdateRangeEvent",
+   "call": "Storefront.Timeline.UpdateRangeEvent",
+   "surface": "any",
+   "category": "Steam Timeline",
+   "title": "Timeline: Update Range Event",
+   "pure": false,
+   "args": [
+    {
+     "name": "event",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "DecompressVoice",
+   "call": "Storefront.DecompressVoice",
+   "surface": "any",
+   "category": "Steam Voice",
+   "title": "Decompress Voice",
+   "pure": false,
+   "args": [
+    {
+     "name": "compressed",
+     "type": "String",
+     "opt": false
+    }
+   ],
+   "rets": [
+    {
+     "name": "Result",
+     "type": "Int"
+    },
+    {
+     "name": "Data",
+     "type": "String"
+    },
+    {
+     "name": "SampleRate",
+     "type": "Int"
+    }
+   ]
+  },
+  {
+   "name": "GetVoice",
+   "call": "Storefront.GetVoice",
+   "surface": "any",
+   "category": "Steam Voice",
+   "title": "Get Voice",
+   "pure": false,
+   "args": [],
+   "rets": [
+    {
+     "name": "Result",
+     "type": "Int"
+    },
+    {
+     "name": "Data",
+     "type": "String"
+    }
+   ]
+  },
+  {
+   "name": "StartVoiceRecording",
+   "call": "Storefront.StartVoiceRecording",
+   "surface": "any",
+   "category": "Steam Voice",
+   "title": "Start Voice Recording",
+   "pure": false,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "StopVoiceRecording",
+   "call": "Storefront.StopVoiceRecording",
+   "surface": "any",
+   "category": "Steam Voice",
+   "title": "Stop Voice Recording",
+   "pure": false,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "CreateItem",
+   "call": "Storefront.Workshop.CreateItem",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Create Item",
+   "pure": false,
+   "args": [
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "Download",
+   "call": "Storefront.Workshop.Download",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Download",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "highPriority",
+     "type": "Bool",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "GetInstallInfo",
+   "call": "Storefront.Workshop.GetInstallInfo",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Get Install Info",
+   "pure": true,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Any"
+  },
+  {
+   "name": "GetItemInfo",
+   "call": "Storefront.Workshop.GetItemInfo",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Get Item Info",
+   "pure": true,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Any"
+  },
+  {
+   "name": "GetItemState",
+   "call": "Storefront.Workshop.GetItemState",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Get Item State",
+   "pure": true,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "GetSubscribed",
+   "call": "Storefront.Workshop.GetSubscribed",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Get Subscribed",
+   "pure": true,
+   "args": [
+    {
+     "name": "includeDisabled",
+     "type": "Bool",
+     "opt": true
+    }
+   ],
+   "ret": "Table"
+  },
+  {
+   "name": "GetUpdateProgress",
+   "call": "Storefront.Workshop.GetUpdateProgress",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Get Update Progress",
+   "pure": true,
+   "args": [],
+   "ret": "Table"
+  },
+  {
+   "name": "MarkDownloadedItemAsUnused",
+   "call": "Storefront.Workshop.MarkDownloadedItemAsUnused",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Mark Downloaded Item As Unused",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "OpenLegalAgreement",
+   "call": "Storefront.Workshop.OpenLegalAgreement",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Open Legal Agreement",
+   "pure": false,
+   "args": [],
+   "ret": "Int"
+  },
+  {
+   "name": "QueryItemsByIds",
+   "call": "Storefront.Workshop.QueryItemsByIds",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Query Items By Ids",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemIds",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "QueryUserItems",
+   "call": "Storefront.Workshop.QueryUserItems",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Query User Items",
+   "pure": false,
+   "args": [
+    {
+     "name": "page",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetFavorite",
+   "call": "Storefront.Workshop.SetFavorite",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Set Favorite",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "favorite",
+     "type": "Bool",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "SetItemsDisabledLocally",
+   "call": "Storefront.Workshop.SetItemsDisabledLocally",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Set Items Disabled Locally",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemIds",
+     "type": "Any",
+     "opt": false
+    },
+    {
+     "name": "disabled",
+     "type": "Bool",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "SetSubscriptionsLoadOrder",
+   "call": "Storefront.Workshop.SetSubscriptionsLoadOrder",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Set Subscriptions Load Order",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemIds",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "Int"
+  },
+  {
+   "name": "SetUserItemVote",
+   "call": "Storefront.Workshop.SetUserItemVote",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Set User Item Vote",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "voteUp",
+     "type": "Bool",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "Subscribe",
+   "call": "Storefront.Workshop.Subscribe",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Subscribe",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "Unsubscribe",
+   "call": "Storefront.Workshop.Unsubscribe",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Unsubscribe",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  },
+  {
+   "name": "UpdateItem",
+   "call": "Storefront.Workshop.UpdateItem",
+   "surface": "any",
+   "category": "Steam Workshop",
+   "title": "Workshop: Update Item",
+   "pure": false,
+   "args": [
+    {
+     "name": "itemId",
+     "type": "Int",
+     "opt": false
+    },
+    {
+     "name": "Params",
+     "type": "Table",
+     "opt": false
+    },
+    {
+     "name": "Callback",
+     "type": "Any",
+     "opt": false
+    }
+   ],
+   "ret": "void"
+  }
+ ]
+}

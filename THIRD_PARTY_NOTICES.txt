@@ -1,0 +1,155 @@
+========================================================================
+        ICEBOX STOREFRONT PLUGIN - THIRD-PARTY NOTICES
+========================================================================
+
+This file lists the third-party software the IceBox Storefront Plugin uses,
+together with the notices those licenses require. Keep this file in the
+plugin folder - it travels with the plugin into the game you ship, and it
+is what satisfies those components' attribution requirements. Section 4.7
+of LICENSE.txt says the same thing in operative language.
+
+The plugin itself is licensed under LICENSE.txt. Everything named below
+keeps its own license instead; where those differ from LICENSE.txt, the
+component's own license governs with respect to that component.
+
+Two things this plugin uses are deliberately NOT redistributed with it and
+are licensed to you directly by their owners: the Steamworks SDK, in
+Section 3, and the IceBox Engine Plugin SDK, in Section 4.
+
+========================================================================
+1. MIT LICENSE
+========================================================================
+Compiled into the plugin library. All four are header-based, so their code
+ends up inside Steam.dll / Steam.so / Steam.dylib:
+
+- sol2 (C++ Lua binding; the whole Storefront Lua API is written against it)
+  Copyright (c) 2013-2022 Rapptz, ThePhD, and contributors
+  https://github.com/ThePhD/sol2/blob/develop/LICENSE.txt
+
+- Lua (scripting language; the plugin links the host engine's Lua)
+  Copyright (c) 1994-2025 Lua.org, PUC-Rio
+  https://www.lua.org/license.html
+
+- nlohmann/json (JSON parser; reads steam_config.json)
+  Copyright (c) 2013-2025 Niels Lohmann
+  https://github.com/nlohmann/json/blob/develop/LICENSE.MIT
+
+- fmt (formatting library; linked only when the host provides it)
+  Copyright (c) 2012 - present, Victor Zverovich and {fmt} contributors
+  https://github.com/fmtlib/fmt/blob/master/LICENSE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+========================================================================
+2. {fmt} OPTIONAL EXCEPTION
+========================================================================
+{fmt} adds the following exception to the MIT terms above. It is reproduced
+here because the plugin embeds parts of {fmt} into its compiled binary:
+
+As an exception, if, as a result of your compiling your source code, portions
+of this Software are embedded into a machine-executable object form of such
+source code, you may redistribute such embedded portions in such object form
+without including the above copyright and permission notices.
+
+========================================================================
+3. STEAMWORKS SDK - RESOLVED AT BUILD TIME, NOT REDISTRIBUTED HERE
+========================================================================
+
+Copyright (c) 1996-2026, Valve Corporation. All rights reserved.
+https://partner.steamgames.com/doc/sdk
+
+The Steamworks SDK is proprietary software owned by Valve Corporation. It is
+NOT open source, it is NOT bundled with this plugin, and no part of it has
+ever been included in this repository or in any package we publish.
+
+How it actually reaches you:
+
+  * You go to the Steamworks partner site yourself, accept Valve's
+    Steamworks SDK Access Agreement, and download the SDK. Valve licenses it
+    to you directly, under that agreement. IceBoxCrew Studio is not a party
+    to it and sublicenses nothing.
+
+  * The plugin was compiled against Valve's headers on IceBoxCrew Studio's
+    own machine, under IceBoxCrew Studio's own agreement with Valve. No part
+    of the SDK ends up in the compiled plugin.
+
+  * At run time the plugin loads the Steam runtime library
+    (steam_api64.dll / libsteam_api.so / libsteam_api.dylib) out of its own
+    folder. That file comes from YOUR copy of the SDK - you copy it there
+    once out of redistributable_bin/, as README.md describes. It is the only
+    file out of the SDK the plugin needs.
+
+Obligations that follow you, not IceBoxCrew Studio:
+
+  (a) Accepting and complying with the Steamworks SDK Access Agreement is
+      yours to do. Section 1.1 of that agreement lets you use the SDK to
+      develop your own software and lets you distribute the contents of the
+      SDK's redistributable_bin folder together with that software in object
+      code form. That is what makes shipping steam_api64.dll inside your
+      released game legitimate.
+
+  (b) That permission does not travel anywhere else. The license Valve
+      grants you is nontransferable, so a Valve file must never be inside
+      anything you hand to another developer. Section 5.4 of LICENSE.txt and
+      DISTRIBUTION.md spell out what this means in practice. The plugin
+      itself is not yours to pass on either - Section 4.1 of LICENSE.txt -
+      so point people at the official download instead.
+
+  (c) Valve's agreement forbids reverse engineering the SDK or writing
+      software to replace its functionality, and requires that Steamworks
+      Services be reached only through the SDK's own API.
+
+  (d) Neither this file, nor LICENSE.txt, nor Valve's agreement grants any
+      right to Valve's trademarks. Steam, Steamworks, Steam Deck, Steam
+      Machine, Steam Frame, Steam Cloud, Steam Workshop, Steam Input, Big
+      Picture, Proton and the Steam logo are trademarks and/or registered
+      trademarks of Valve Corporation. This plugin uses those names
+      descriptively only and contains no Valve artwork or logo.
+      IceBox Storefront Plugin is not made by, not affiliated with,
+      not endorsed by and not sponsored by Valve Corporation.
+
+========================================================================
+4. ICEBOX ENGINE PLUGIN SDK - SUPPLIED BY THE ENGINE, NOT BUNDLED HERE
+========================================================================
+
+Copyright (c) 2026 IceBoxCrew Studio. All rights reserved.
+
+The plugin was compiled against a single engine header,
+Source/Engine/Core/PluginInterface.h. That header is not redistributed in
+this package.
+
+IceBox Engine is proprietary software licensed under the IceBox Engine
+License Agreement (LICENSE.txt in the engine). Section 6 of that agreement
+permits writing, publishing, distributing and selling Extensions such as
+this plugin; Section 6.3(a) permits the compiled Extension to carry the
+parts of the engine's SDK headers that a compiler necessarily embeds.
+
+Using this plugin requires your own licensed copy of IceBox Engine.
+
+========================================================================
+5. NOTHING ELSE IS BUNDLED
+========================================================================
+
+The plugin ships no fonts, no audio, no sample content, no vendored source
+trees and no prebuilt third-party binaries of any kind. The only image in the
+package is icon.png, drawn by IceBoxCrew Studio. Its only compiled output is
+the plugin library itself, and the only libraries inside it are the four in
+Section 1.
+
+========================================================================
