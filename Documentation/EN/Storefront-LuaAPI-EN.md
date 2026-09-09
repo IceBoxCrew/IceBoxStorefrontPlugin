@@ -1,8 +1,8 @@
-# 🧊 IceBox Storefront Plugin — `Storefront` Lua API
+# 🧊 IceBoxStorefront Plugin — `Storefront` Lua API
 
 ## Complete English Documentation
 
-> The **IceBox Storefront Plugin** integrates the **Steamworks SDK** into IceBox Engine and exposes a
+> The **IceBoxStorefront Plugin** integrates the **Steamworks SDK** into IceBoxEngine and exposes a
 > single Lua table — **`Storefront`** — to your gameplay scripts (`.ice_class`, `.icemap`, `.ice_widget`).
 >
 > Through `Storefront` you get **achievements**, **stats**, **leaderboards**, **Steam Cloud**,
@@ -13,7 +13,7 @@
 > This document describes **every** Lua function, enum, callback, and returned table the plugin exposes,
 > with signatures, parameter tables, return values, and runnable examples.
 
-> **Not a Valve product.** IceBox Storefront Plugin is developed by IceBoxCrew Studio and is **not made by,
+> **Not a Valve product.** IceBoxStorefront Plugin is developed by IceBoxCrew Studio and is **not made by,
 > affiliated with, endorsed by or sponsored by Valve Corporation**. Steam, Steamworks, Steam Deck, Steam
 > Machine, Steam Frame, Steam Cloud, Steam Workshop, Steam Input, Big Picture and Proton are trademarks
 > and/or registered trademarks of Valve Corporation; this document uses those names descriptively only.
@@ -411,10 +411,27 @@ end
 
 ### Backend availability and Steam-only calls
 
-- The **backend-agnostic** functions check whether *any* storefront backend is active. If none is, they return a
-  safe default (`NotInitialized`, `false`, `nil`, or an empty table).
-- The **Steam-specific** functions (Workshop, Input, voice, Steam Deck, auth tickets, overlay invite dialogs, app
-  info, …) require the **Steam** backend specifically to be initialized; otherwise they return their safe default.
+Every function on `Storefront` — without exception — is dispatched through the plugin's backend interface, never
+through Steam directly. What differs is how much of that interface a given backend implements:
+
+- The **portable core** (achievements, stats, leaderboards, cloud, friends, rich presence, overlay, lobbies, P2P,
+  DLC) is required of every backend. If no backend is active at all, these return a safe default
+  (`NotInitialized`, `false`, `nil`, or an empty table).
+- The **capability groups** (Workshop, Input, Timeline, voice, auth tickets, device info, gamepad text, app info,
+  avatars, screenshots) are optional. A backend that does not implement one returns the same safe defaults, or
+  `Unsupported` where a result code is returned. Nothing throws and nothing crashes.
+
+Ask before you branch, rather than assuming Steam:
+
+```lua
+if Storefront.Supports(Storefront.Capability.Workshop) then
+    ShowModBrowser()
+end
+```
+
+[`Storefront.Supports`](#414-storefrontsupports) is the supported way to find out what the active backend can do.
+Today Steam is the only backend the plugin ships, and it reports every capability as available except
+`Timeline`, which additionally depends on the Steam client being new enough.
 
 Always gate your integration on availability and login:
 
@@ -472,6 +489,7 @@ Storefront.GetBackendId() -> int
 ```
 
 Returns the active backend as an integer (see [`Storefront.Backend`](#backend-enum)): `1` for Steam, `0` for none.
+The enum reserves further identifiers for backends the plugin may gain later; only `Steam` ships today.
 
 ---
 
@@ -605,6 +623,73 @@ debugging — never branch on the *string*; compare the numeric code against `St
 local r = Storefront.CloudWrite("save.dat", data)
 if r ~= Storefront.Result.Ok then
     Print("Cloud write failed: " .. Storefront.ResultName(r))
+end
+```
+
+---
+
+### 4.13 Storefront.GetProductId
+
+```lua
+Storefront.GetProductId() -> string
+```
+
+Returns the active backend's product identifier as a **string** — the same value as
+[`Storefront.GetAppId()`](#46-storefrontgetappid) on Steam, where the identifier is numeric. Prefer this over
+`GetAppId()` in code that only needs to log or transmit the identifier: backends other than Steam identify a
+product with a non-numeric id, and this function keeps such code portable. Returns an empty string when no
+backend is active.
+
+```lua
+Print("Product: " .. Storefront.GetProductId())
+```
+
+---
+
+### 4.14 Storefront.Supports
+
+```lua
+Storefront.Supports(capability) -> bool
+```
+
+Reports whether the active backend implements a [capability group](#capability-enum). Returns `false` when no
+backend is active, so a single check covers both "no storefront at all" and "this storefront cannot do that".
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `capability` | `int` | A [`Storefront.Capability`](#capability-enum) constant |
+
+```lua
+if Storefront.Supports(Storefront.Capability.Voice) then
+    EnableVoiceChatUI()
+end
+
+if not Storefront.Supports(Storefront.Capability.Timeline) then
+    Print("Game Recording markers are unavailable on this client")
+end
+```
+
+Calling into an unsupported group is still safe — it returns the group's neutral default. `Supports` exists so you
+can hide UI and skip work instead of calling and discarding the result.
+
+---
+
+### 4.15 Storefront.CapabilityName
+
+```lua
+Storefront.CapabilityName(capability) -> string
+```
+
+Converts a [`Storefront.Capability`](#capability-enum) constant into its name (e.g. `12` → `"Workshop"`). For
+logging and debugging only — branch on the numeric constants, never on the string.
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `capability` | `int` | A [`Storefront.Capability`](#capability-enum) constant |
+
+```lua
+for _, cap in ipairs({ Storefront.Capability.Workshop, Storefront.Capability.Input }) do
+    Print(Storefront.CapabilityName(cap) .. ": " .. tostring(Storefront.Supports(cap)))
 end
 ```
 
@@ -1010,7 +1095,7 @@ Uploads a score to a leaderboard.
 | Parameter | Type | Description |
 |-----------|------|-------------|
 | `handle` | `int` | Leaderboard handle from `FindOrCreateLeaderboard` |
-| `score` | `int` | The score to submit |
+| `score` | `int` | The score to submit. Steam stores leaderboard scores as **signed 32-bit** integers, so the value must lie between `-2147483648` and `2147483647`. A score outside that range is rejected with `InvalidArgument` and a log line, rather than silently wrapping around — scale or clamp it in your game first. |
 | `details` | `table` | Optional 1-indexed array of integers stored alongside the score (e.g. metadata); pass `{}` for none |
 | `method` | `int` | A [`LeaderboardUpload`](#leaderboardupload-enum) value — `KeepBest` (only replace if better) or `ForceUpdate` (always replace) |
 | `callback` | `function(result)` | Delivers the [`Result`](#result-enum) code |
@@ -3223,6 +3308,7 @@ Storefront.IsSubscribed()                  -> bool   -- user owns/licenses this 
 Storefront.IsSubscribedFromFreeWeekend()   -> bool   -- access via a Free Weekend
 Storefront.IsSubscribedFromFamilySharing() -> bool   -- access via Family Sharing
 Storefront.IsLowViolence()                 -> bool   -- the low-violence build variant
+Storefront.IsCybercafe()                   -> bool   -- the account is a cybercafe/internet-cafe account
 Storefront.IsVACBanned()                   -> bool   -- the user is VAC-banned for this app
 ```
 
@@ -3703,6 +3789,46 @@ rather than hard-coding numbers.
 |----------|-------|---------|
 | `None` | `0` | No backend active |
 | `Steam` | `1` | Steam backend |
+| `Epic` | `2` | Reserved for an Epic backend |
+| `GOG` | `3` | Reserved for a GOG Galaxy backend |
+| `Microsoft` | `4` | Reserved for a Microsoft Store backend |
+| `Itch` | `5` | Reserved for an itch.io backend |
+| `Discord` | `6` | Reserved for a Discord backend |
+| `Custom` | `7` | Reserved for a backend of your own |
+
+Only `Steam` ships today. The remaining identifiers are fixed in advance so that a script written now keeps
+comparing correctly if the plugin ever gains another backend.
+
+<a id="capability-enum"></a>
+### Storefront.Capability
+
+Passed to [`Storefront.Supports`](#414-storefrontsupports) and [`Storefront.CapabilityName`](#415-storefrontcapabilityname).
+
+| Constant | Value | Covers |
+|----------|-------|--------|
+| `Achievements` | `0` | Unlock, clear, progress, icons, global percentages |
+| `Stats` | `1` | Integer/float stats, averages, storing |
+| `Leaderboards` | `2` | Find-or-create, upload, download |
+| `Cloud` | `3` | Cloud read/write/delete/list and quota |
+| `Friends` | `4` | The friends list |
+| `RichPresence` | `5` | Rich presence and the connect string |
+| `Overlay` | `6` | Overlay dialogs and web pages |
+| `Lobbies` | `7` | Matchmaking lobbies and lobby chat |
+| `P2P` | `8` | Peer-to-peer messaging |
+| `Voice` | `9` | Voice capture, compression and decoding |
+| `DLC` | `10` | The DLC list, install state and store pages |
+| `AuthTickets` | `11` | Session, Web API and encrypted app tickets |
+| `Workshop` | `12` | `Storefront.Workshop.*` — user-generated content |
+| `Input` | `13` | `Storefront.Input.*` — controllers, actions, glyphs |
+| `Timeline` | `14` | `Storefront.Timeline.*` — Game Recording markers |
+| `Screenshots` | `15` | Triggering screenshots |
+| `AppInfo` | `16` | Ownership, build id, beta, install dir, launch parameters |
+| `Device` | `17` | Steam Deck / Machine / Frame, Proton, VR, battery, performance |
+| `GamepadText` | `18` | On-screen keyboard input |
+| `Avatars` | `19` | Friend avatars and image handles |
+
+With Steam active every capability reports `true` except `Timeline`, which also requires a Steam client new enough
+to expose the Timeline API.
 
 <a id="result-enum"></a>
 ### Storefront.Result
@@ -4408,6 +4534,15 @@ account does not own the AppId; or this is a non-desktop build (Android/iOS/Web 
 the test AppId `480`, make sure you own/own-via-free Spacewar or that a `steam_appid.txt` exists during development.
 The engine log always says which of these it was — look for the `[Steam]` lines.
 
+The plugin **retries at most once every five seconds** while it has no backend, so starting the Steam client after
+the game or the editor is already running is enough: the log then shows `[Steam] SteamAPI connected on retry` and
+`IsAvailable()` starts returning `true`. Creating `steam_config.json` after the fact works the same way — no restart
+needed. Each distinct failure is logged once, not once per retry.
+
+The retry runs from the plugin's per-frame update, which the engine drives **while the runtime is running** — in the
+editor that means Play mode, not edit mode. In a shipped game it is always running. So in the editor: start Steam,
+enter Play mode, and the backend attaches within five seconds.
+
 **Scripts fail with "attempt to index a nil value (global 'Storefront')".**
 Either the plugin is not enabled in **Tools → Plugins & Mods**, or the engine log carries a
 `[Steam] Lua ABI mismatch` line. The plugin is linked against the very same Lua the engine links, and the two
@@ -4456,7 +4591,7 @@ no-op. Guarding on `IsAvailable()` keeps one script working across all platforms
 
 ## 25. Visual Scripting Nodes
 
-The plugin ships its own visual-scripting catalog — `VisualScriptAPI.json` in the plugin root. The IceBox editor
+The plugin ships its own visual-scripting catalog — `VisualScriptAPI.json` in the plugin root. The IceBoxEngineEditor
 loads such catalogs from every plugin folder automatically, so when the Storefront plugin is present the whole
 `Storefront` API is also available as nodes in the Visual Script editor. No engine configuration is required.
 
@@ -4495,7 +4630,7 @@ replace it together with the library whenever you take a new release.
 
 ## Legal
 
-**IceBox Storefront Plugin** — © 2026 IceBoxCrew Studio. Licensed under `LICENSE.txt` in the plugin root.
+**IceBoxStorefront Plugin** — © 2026 IceBoxCrew Studio. Licensed under `LICENSE.txt` in the plugin root.
 Third-party notices: `THIRD_PARTY_NOTICES.txt`. Shipping your game: `DISTRIBUTION.md`. Summary: `NOTICE.md`.
 
 The plugin is **free but not open source**: no source code is supplied, and republishing the plugin on its own is
@@ -4507,14 +4642,14 @@ countries. This plugin and this document use those names descriptively only, to 
 integrates with and to name the API calls, folders and configuration keys Valve itself defines. No Valve logo or
 artwork is included.
 
-**IceBox Storefront Plugin is not made by, affiliated with, endorsed by or sponsored by Valve Corporation.**
+**IceBoxStorefront Plugin is not made by, affiliated with, endorsed by or sponsored by Valve Corporation.**
 
 The **Steamworks SDK is not distributed with this plugin**. Obtain it from
 [Valve's Steamworks partner site](https://partner.steamgames.com/doc/sdk) under Valve's own *Steamworks SDK Access
 Agreement*, which Valve concludes with you directly. Never place a file from that SDK into anything you hand to
 another developer.
 
-Using this plugin requires your own licensed copy of IceBox Engine.
+Using this plugin requires your own licensed copy of IceBoxEngine.
 
 <sub>Nothing in this documentation is legal advice.</sub>
 

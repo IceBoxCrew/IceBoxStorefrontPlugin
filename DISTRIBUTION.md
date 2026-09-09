@@ -155,7 +155,7 @@ minute, for free — the same page you got it from.
 
 <sub>Steam, Steamworks, Steam Deck, Steam Machine, Steam Frame, Steam Cloud, Steam
 Workshop, Steam Input, Big Picture and Proton are trademarks and/or registered
-trademarks of Valve Corporation, used here descriptively only. IceBox Storefront
+trademarks of Valve Corporation, used here descriptively only. IceBoxStorefront
 Plugin is not made by, not affiliated with, not endorsed by and not sponsored by
 Valve Corporation. See `LICENSE.txt`, `NOTICE.md` and `THIRD_PARTY_NOTICES.txt`.
 Nothing here is legal advice.</sub>
@@ -319,6 +319,6 @@ nlohmann/json и fmt: они вкомпилированы в библиотек�
 <sub>Steam, Steamworks, Steam Deck, Steam Machine, Steam Frame, Steam Cloud, Steam
 Workshop, Steam Input, Big Picture и Proton — товарные знаки и/или зарегистрированные
 товарные знаки Valve Corporation, используемые здесь исключительно описательно.
-IceBox Storefront Plugin не создан Valve Corporation, не аффилирован с ней, не одобрен
+IceBoxStorefront Plugin не создан Valve Corporation, не аффилирован с ней, не одобрен
 и не спонсируется ею. См. `LICENSE.txt`, `NOTICE.md` и `THIRD_PARTY_NOTICES.txt`.
 Ничто здесь не является юридической консультацией.</sub>

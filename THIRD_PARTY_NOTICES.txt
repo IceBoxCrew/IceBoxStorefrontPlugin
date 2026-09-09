@@ -1,8 +1,8 @@
 ========================================================================
-        ICEBOX STOREFRONT PLUGIN - THIRD-PARTY NOTICES
+        IceBoxStorefront PLUGIN - THIRD-PARTY NOTICES
 ========================================================================
 
-This file lists the third-party software the IceBox Storefront Plugin uses,
+This file lists the third-party software the IceBoxStorefront Plugin uses,
 together with the notices those licenses require. Keep this file in the
 plugin folder - it travels with the plugin into the game you ship, and it
 is what satisfies those components' attribution requirements. Section 4.7
@@ -14,7 +14,7 @@ component's own license governs with respect to that component.
 
 Two things this plugin uses are deliberately NOT redistributed with it and
 are licensed to you directly by their owners: the Steamworks SDK, in
-Section 3, and the IceBox Engine Plugin SDK, in Section 4.
+Section 3, and the IceBoxEngine Plugin SDK, in Section 4.
 
 ========================================================================
 1. MIT LICENSE
@@ -121,11 +121,11 @@ Obligations that follow you, not IceBoxCrew Studio:
       Picture, Proton and the Steam logo are trademarks and/or registered
       trademarks of Valve Corporation. This plugin uses those names
       descriptively only and contains no Valve artwork or logo.
-      IceBox Storefront Plugin is not made by, not affiliated with,
+      IceBoxStorefront Plugin is not made by, not affiliated with,
       not endorsed by and not sponsored by Valve Corporation.
 
 ========================================================================
-4. ICEBOX ENGINE PLUGIN SDK - SUPPLIED BY THE ENGINE, NOT BUNDLED HERE
+4. IceBoxEngine PLUGIN SDK - SUPPLIED BY THE ENGINE, NOT BUNDLED HERE
 ========================================================================
 
 Copyright (c) 2026 IceBoxCrew Studio. All rights reserved.
@@ -134,13 +134,13 @@ The plugin was compiled against a single engine header,
 Source/Engine/Core/PluginInterface.h. That header is not redistributed in
 this package.
 
-IceBox Engine is proprietary software licensed under the IceBox Engine
+IceBoxEngine is proprietary software licensed under the IceBoxEngine
 License Agreement (LICENSE.txt in the engine). Section 6 of that agreement
 permits writing, publishing, distributing and selling Extensions such as
 this plugin; Section 6.3(a) permits the compiled Extension to carry the
 parts of the engine's SDK headers that a compiler necessarily embeds.
 
-Using this plugin requires your own licensed copy of IceBox Engine.
+Using this plugin requires your own licensed copy of IceBoxEngine.
 
 ========================================================================
 5. NOTHING ELSE IS BUNDLED

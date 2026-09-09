@@ -1,17 +1,17 @@
 ================================================================================
-                  ICEBOX STOREFRONT PLUGIN - LICENSE
+                  IceBoxStorefront PLUGIN - LICENSE
 ================================================================================
 
 Version:        2.0
 Effective date: 2026-09-09
-Applies to:     IceBox Storefront Plugin - the Steamworks integration plugin
-                for IceBox Engine - as supplied in compiled form together
+Applies to:     IceBoxStorefront Plugin - the Steamworks integration plugin
+                for IceBoxEngine - as supplied in compiled form together
                 with its manifest, node catalog, icon and documentation
 
 Copyright (c) 2026 IceBoxCrew Studio. All rights reserved.
 
 This License is a legal agreement between you ("You") and IceBoxCrew Studio
-("we", "us", "our") covering the IceBox Storefront Plugin.
+("we", "us", "our") covering the IceBoxStorefront Plugin.
 
 --------------------------------------------------------------------------------
 IN PLAIN LANGUAGE
@@ -50,7 +50,7 @@ IN PLAIN LANGUAGE
   * We are not Valve. This plugin is not made by, affiliated with,
     endorsed by or sponsored by Valve Corporation.
 
-  * You still need IceBox Engine. This License gives you no rights to the
+  * You still need IceBoxEngine. This License gives you no rights to the
     engine; the engine has its own license.
 
 This box is a summary written for convenience. It is not the agreement. The
@@ -61,7 +61,7 @@ differently.
 1. DEFINITIONS
 --------------------------------------------------------------------------------
 
-"Plugin" and "Software" mean the IceBox Storefront Plugin as we supply it:
+"Plugin" and "Software" mean the IceBoxStorefront Plugin as we supply it:
 the compiled plugin library (Steam.dll, Steam.so or Steam.dylib),
 plugin.json, VisualScriptAPI.json, icon.png, the contents of
 Documentation/, README.md, NOTICE.md, DISTRIBUTION.md, this License,
@@ -69,7 +69,7 @@ THIRD_PARTY_NOTICES.txt, and every other file we author and supply in the
 package or in the public repository - except for what Section 3 excludes.
 
 "Your Game" means an interactive software application that You develop with
-IceBox Engine and distribute to end users, in which the Plugin is one
+IceBoxEngine and distribute to end users, in which the Plugin is one
 component among many and is not itself the thing being distributed.
 
 "Steamworks SDK" means the software development kit that Valve Corporation
@@ -78,7 +78,7 @@ whole or in any part, including its headers, its import libraries, its
 documentation, its tools, and the binaries in its redistributable_bin
 folder.
 
-"Engine" means IceBox Engine and everything IceBoxCrew Studio ships with it,
+"Engine" means IceBoxEngine and everything IceBoxCrew Studio ships with it,
 including its Plugin SDK headers.
 
 "Third-Party Components" means the open-source libraries listed in
@@ -92,7 +92,7 @@ THIRD_PARTY_NOTICES.txt that are compiled into the Plugin.
     worldwide, non-exclusive, non-transferable, non-sublicensable license
     to install and use the Plugin, on any number of computers You or Your
     organization control, to develop, test and publish games and other
-    applications with IceBox Engine, including commercial ones.
+    applications with IceBoxEngine, including commercial ones.
 
 2.2 Distribution inside Your Game. You may reproduce and distribute the
     Plugin, in the compiled form in which we supplied it, as an integrated
@@ -115,7 +115,7 @@ THIRD_PARTY_NOTICES.txt that are compiled into the Plugin.
     this package, it has never been included in it, and no part of it is
     licensed to you by this document. Section 5 applies to it.
 
-3.2 The Engine is not part of the Software. IceBox Engine is proprietary
+3.2 The Engine is not part of the Software. IceBoxEngine is proprietary
     software licensed separately by IceBoxCrew Studio under the IceBox
     Engine License Agreement. Nothing here grants you any right in it.
     Section 8 applies.
@@ -229,7 +229,7 @@ And one thing You must do:
     read as cooperation with, partnership with, sponsorship by, endorsement
     by or affiliation with Valve.
 
-6.4 IceBox, IceBoxEngine, IceBoxCrew and IceBox Storefront Plugin are marks
+6.4 IceBox, IceBoxEngine, IceBoxCrew and IceBoxStorefront Plugin are marks
     of IceBoxCrew Studio. This License grants you no right to use them,
     other than to state truthfully that Your Game was built with them.
 
@@ -246,21 +246,21 @@ And one thing You must do:
     THIRD_PARTY_NOTICES.txt with the Plugin.
 
 --------------------------------------------------------------------------------
-8. RELATIONSHIP TO ICEBOX ENGINE
+8. RELATIONSHIP TO IceBoxEngine
 --------------------------------------------------------------------------------
 
-8.1 The Plugin is an Extension of IceBox Engine within the meaning of
-    Section 6 of the IceBox Engine License Agreement, which permits writing,
+8.1 The Plugin is an Extension of IceBoxEngine within the meaning of
+    Section 6 of the IceBoxEngine License Agreement, which permits writing,
     publishing, distributing and selling Extensions.
 
-8.2 The Plugin requires a licensed copy of IceBox Engine to run. Receiving
+8.2 The Plugin requires a licensed copy of IceBoxEngine to run. Receiving
     the Plugin gives you no license to the Engine and is not a way to use
     the Engine without your own license for it.
 
 8.3 The Plugin contains no Engine source code, no Engine binaries, no
     prebuilt Engine core libraries and no Engine SDK headers, other than the
     parts of PluginInterface.h that a compiler necessarily embeds when
-    building against it - which Section 6.3(a) of the IceBox Engine License
+    building against it - which Section 6.3(a) of the IceBoxEngine License
     Agreement expressly permits.
 
 8.4 A build of the Plugin is tied to an Engine version, because both link

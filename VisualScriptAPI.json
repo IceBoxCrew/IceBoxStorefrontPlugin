@@ -2,6 +2,45 @@
  "version": 1,
  "functions": [
   {
+   "name": "CapabilityName",
+   "call": "Storefront.CapabilityName",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Capability Name",
+   "pure": true,
+   "args": [
+    {
+     "name": "capability",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.Capability.Achievements",
+      "Storefront.Capability.Stats",
+      "Storefront.Capability.Leaderboards",
+      "Storefront.Capability.Cloud",
+      "Storefront.Capability.Friends",
+      "Storefront.Capability.RichPresence",
+      "Storefront.Capability.Overlay",
+      "Storefront.Capability.Lobbies",
+      "Storefront.Capability.P2P",
+      "Storefront.Capability.Voice",
+      "Storefront.Capability.DLC",
+      "Storefront.Capability.AuthTickets",
+      "Storefront.Capability.Workshop",
+      "Storefront.Capability.Input",
+      "Storefront.Capability.Timeline",
+      "Storefront.Capability.Screenshots",
+      "Storefront.Capability.AppInfo",
+      "Storefront.Capability.Device",
+      "Storefront.Capability.GamepadText",
+      "Storefront.Capability.Avatars"
+     ],
+     "default": "Storefront.Capability.Achievements"
+    }
+   ],
+   "ret": "String"
+  },
+  {
    "name": "GetAppId",
    "call": "Storefront.GetAppId",
    "surface": "any",
@@ -167,6 +206,16 @@
    "ret": "String"
   },
   {
+   "name": "GetProductId",
+   "call": "Storefront.GetProductId",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Get Product Id",
+   "pure": true,
+   "args": [],
+   "ret": "String"
+  },
+  {
    "name": "GetSecondsSinceAppActive",
    "call": "Storefront.GetSecondsSinceAppActive",
    "surface": "any",
@@ -192,6 +241,16 @@
    "surface": "any",
    "category": "Steam",
    "title": "Is Available",
+   "pure": true,
+   "args": [],
+   "ret": "Bool"
+  },
+  {
+   "name": "IsCybercafe",
+   "call": "Storefront.IsCybercafe",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Is Cybercafe",
    "pure": true,
    "args": [],
    "ret": "Bool"
@@ -315,6 +374,45 @@
     }
    ],
    "ret": "String"
+  },
+  {
+   "name": "Supports",
+   "call": "Storefront.Supports",
+   "surface": "any",
+   "category": "Steam",
+   "title": "Supports",
+   "pure": true,
+   "args": [
+    {
+     "name": "capability",
+     "type": "Any",
+     "opt": false,
+     "values": [
+      "Storefront.Capability.Achievements",
+      "Storefront.Capability.Stats",
+      "Storefront.Capability.Leaderboards",
+      "Storefront.Capability.Cloud",
+      "Storefront.Capability.Friends",
+      "Storefront.Capability.RichPresence",
+      "Storefront.Capability.Overlay",
+      "Storefront.Capability.Lobbies",
+      "Storefront.Capability.P2P",
+      "Storefront.Capability.Voice",
+      "Storefront.Capability.DLC",
+      "Storefront.Capability.AuthTickets",
+      "Storefront.Capability.Workshop",
+      "Storefront.Capability.Input",
+      "Storefront.Capability.Timeline",
+      "Storefront.Capability.Screenshots",
+      "Storefront.Capability.AppInfo",
+      "Storefront.Capability.Device",
+      "Storefront.Capability.GamepadText",
+      "Storefront.Capability.Avatars"
+     ],
+     "default": "Storefront.Capability.Achievements"
+    }
+   ],
+   "ret": "Bool"
   },
   {
    "name": "TriggerScreenshot",

@@ -1,6 +1,6 @@
 # Notice
 
-**IceBox Storefront Plugin** — Steamworks integration for IceBox Engine.
+**IceBoxStorefront Plugin** — Steamworks integration for IceBoxEngine.
 Copyright © 2026 IceBoxCrew Studio. Licensed under [LICENSE.txt](LICENSE.txt).
 
 ---
@@ -76,7 +76,7 @@ service it integrates with, and to name the API calls, folders, configuration ke
 and identifiers Valve itself defines. It contains no Valve logo, no Valve artwork
 and no Valve branding.
 
-**IceBox Storefront Plugin is not made by, affiliated with, endorsed by or
+**IceBoxStorefront Plugin is not made by, affiliated with, endorsed by or
 sponsored by Valve Corporation.**
 
 IceBox, IceBoxEngine and IceBoxCrew are marks of IceBoxCrew Studio.
@@ -90,14 +90,14 @@ library. Their full notices are in
 folder** — it travels with the plugin into your game and it is what satisfies those
 components' attribution requirements.
 
-## IceBox Engine
+## IceBoxEngine
 
-The plugin is an Extension under Section 6 of the *IceBox Engine License Agreement*,
+The plugin is an Extension under Section 6 of the *IceBoxEngine License Agreement*,
 which permits publishing, distributing and selling Extensions. It contains no engine
 source, binaries or core libraries, and it was compiled against exactly one engine
 header, `PluginInterface.h`.
 
-Using this plugin requires your own licensed copy of IceBox Engine. Receiving it
+Using this plugin requires your own licensed copy of IceBoxEngine. Receiving it
 gives you no license to the engine.
 
 A plugin build is tied to an engine version — both link the same Lua. Each release
