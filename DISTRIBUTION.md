@@ -12,12 +12,13 @@ with it, and your `steam_appid.txt` does not.
 
 ## The plugin folder, and what is in it
 
-After you unpack the release and drop Valve's runtime beside it, `Plugins/Steam/`
-looks like this:
+After you unpack the release and drop Valve's runtime beside it,
+`Plugins/IceBoxStorefront/` looks like this:
 
 ```
-Plugins/Steam/
-├── Steam.dll / Steam.so / Steam.dylib   the plugin        — from us
+Plugins/IceBoxStorefront/
+├── IceBoxStorefront.dll / IceBoxStorefront.so /
+│   IceBoxStorefront.dylib               the plugin        — from us
 ├── steam_api64.dll / libsteam_api.so /
 │   libsteam_api.dylib                   Steam runtime     — from Valve, you add it
 ├── plugin.json                          manifest          — from us
@@ -32,8 +33,9 @@ Plugins/Steam/
 
 Four of those files are **required at run time** and are easy to delete by mistake:
 
-- **`Steam.dll` / `Steam.so` / `Steam.dylib`** — the plugin itself. One per platform;
-  a `Steam.dll` is of no use to a Linux build.
+- **`IceBoxStorefront.dll` / `IceBoxStorefront.so` / `IceBoxStorefront.dylib`** — the
+  plugin itself. One per platform; an `IceBoxStorefront.dll` is of no use to a Linux
+  build.
 - **`steam_api64.dll` / `libsteam_api.so` / `libsteam_api.dylib`** — Valve's runtime.
   It must sit **in the plugin folder**, beside the plugin library: that is the one
   location all three dynamic loaders agree on. On Windows the plugin loads it from
@@ -67,9 +69,9 @@ They produce no error when you get them wrong, which is what makes them worth a 
 ### 1. Enable the plugin in `Config/Plugins.json`
 
 The engine discovers every plugin folder but loads only the ones listed as enabled
-there. Tick **Steam** once in the editor's **Tools → Plugins & Mods** — that writes the
-file, and **Tools → Build Game** copies it into the package. Without it your game ships
-the plugin and never loads it.
+there. Tick **IceBoxStorefront** once in the editor's **Tools → Plugins & Mods** — that
+writes the file, and **Tools → Build Game** copies it into the package. Without it your
+game ships the plugin and never loads it.
 
 ### 2. Do not ship `steam_appid.txt`
 
@@ -128,10 +130,10 @@ sample repository, a zip in a chat.
 
 ### The plugin itself, on its own
 
-The plugin is free, and it is not yours to republish. Uploading `Steam.dll` to another
-site, putting it in an asset pack or a plugin bundle, shipping it inside a modified
-engine distribution, or charging for it — none of that is permitted, whether or not
-money changes hands. See Section 4.1 of [`LICENSE.txt`](LICENSE.txt).
+The plugin is free, and it is not yours to republish. Uploading `IceBoxStorefront.dll`
+to another site, putting it in an asset pack or a plugin bundle, shipping it inside a
+modified engine distribution, or charging for it — none of that is permitted, whether
+or not money changes hands. See Section 4.1 of [`LICENSE.txt`](LICENSE.txt).
 
 Inside your game it travels freely; that is Section 2.2 and it is the whole point.
 Someone else who wants the plugin gets it from the official download page, in about a
@@ -143,7 +145,7 @@ minute, for free — the same page you got it from.
 
 |  | Goes out with your **game** | Goes out to another **developer** |
 |---|---|---|
-| `Steam.dll` / `.so` / `.dylib` | ✅ required | 🚫 no — send them the download link |
+| `IceBoxStorefront.dll` / `.so` / `.dylib` | ✅ required | 🚫 no — send them the download link |
 | `plugin.json`, `VisualScriptAPI.json`, `icon.png` | ✅ required | 🚫 no |
 | `LICENSE.txt`, `NOTICE.md`, `THIRD_PARTY_NOTICES.txt` | ✅ keep them | — |
 | `Documentation/`, `README.md` | optional | — |
@@ -175,12 +177,13 @@ Nothing here is legal advice.</sub>
 
 ## Папка плагина и что в ней лежит
 
-После того как вы распаковали релиз и положили рядом рантайм Valve, `Plugins/Steam/`
-выглядит так:
+После того как вы распаковали релиз и положили рядом рантайм Valve,
+`Plugins/IceBoxStorefront/` выглядит так:
 
 ```
-Plugins/Steam/
-├── Steam.dll / Steam.so / Steam.dylib   плагин            — от нас
+Plugins/IceBoxStorefront/
+├── IceBoxStorefront.dll / IceBoxStorefront.so /
+│   IceBoxStorefront.dylib               плагин            — от нас
 ├── steam_api64.dll / libsteam_api.so /
 │   libsteam_api.dylib                   рантайм Steam     — от Valve, кладёте вы
 ├── plugin.json                          манифест          — от нас
@@ -195,8 +198,8 @@ Plugins/Steam/
 
 Четыре из этих файлов **обязательны во время выполнения** и их легко удалить по ошибке:
 
-- **`Steam.dll` / `Steam.so` / `Steam.dylib`** — сам плагин. По одному на платформу:
-  `Steam.dll` бесполезен для сборки под Linux.
+- **`IceBoxStorefront.dll` / `IceBoxStorefront.so` / `IceBoxStorefront.dylib`** — сам
+  плагин. По одному на платформу: `IceBoxStorefront.dll` бесполезен для сборки под Linux.
 - **`steam_api64.dll` / `libsteam_api.so` / `libsteam_api.dylib`** — рантайм Valve.
   Он должен лежать **в папке плагина**, рядом с библиотекой плагина: это единственное
   место, с которым согласны все три динамических загрузчика. На Windows плагин грузит
@@ -229,9 +232,9 @@ nlohmann/json и fmt: они вкомпилированы в библиотек�
 ### 1. Включите плагин в `Config/Plugins.json`
 
 Движок находит все папки плагинов, но грузит только те, что перечислены там как
-включённые. Отметьте **Steam** один раз в **Tools → Plugins & Mods** — это запишет файл,
-а **Tools → Build Game** скопирует его в пакет. Без этого ваша игра увезёт плагин и
-никогда его не загрузит.
+включённые. Отметьте **IceBoxStorefront** один раз в **Tools → Plugins & Mods** — это
+запишет файл, а **Tools → Build Game** скопирует его в пакет. Без этого ваша игра увезёт
+плагин и никогда его не загрузит.
 
 ### 2. Не отгружайте `steam_appid.txt`
 
@@ -291,8 +294,8 @@ nlohmann/json и fmt: они вкомпилированы в библиотек�
 
 ### Сам плагин — отдельно от игры
 
-Плагин бесплатный, но перезаливать его нельзя. Выложить `Steam.dll` на другой сайт,
-положить его в пак ассетов или в бандл плагинов, увезти его внутри изменённой сборки
+Плагин бесплатный, но перезаливать его нельзя. Выложить `IceBoxStorefront.dll` на другой
+сайт, положить его в пак ассетов или в бандл плагинов, увезти его внутри изменённой сборки
 движка, брать за него деньги — ничего из этого не разрешено, независимо от того, идут
 ли деньги. См. Раздел 4.1 в [`LICENSE.txt`](LICENSE.txt).
 
@@ -306,7 +309,7 @@ nlohmann/json и fmt: они вкомпилированы в библиотек�
 
 |  | Уезжает с вашей **игрой** | Уезжает другому **разработчику** |
 |---|---|---|
-| `Steam.dll` / `.so` / `.dylib` | ✅ обязательно | 🚫 нет — дайте ссылку на загрузку |
+| `IceBoxStorefront.dll` / `.so` / `.dylib` | ✅ обязательно | 🚫 нет — дайте ссылку на загрузку |
 | `plugin.json`, `VisualScriptAPI.json`, `icon.png` | ✅ обязательно | 🚫 нет |
 | `LICENSE.txt`, `NOTICE.md`, `THIRD_PARTY_NOTICES.txt` | ✅ оставьте на месте | — |
 | `Documentation/`, `README.md` | по желанию | — |

@@ -6,11 +6,11 @@
 # --- The plugin's own compiled libraries -----------------------------------
 # They belong in a Release, not in git history. Delete these four lines if you
 # ever decide to version them instead.
-Steam.dll
-Steam.so
-Steam.dylib
-libSteam.so
-libSteam.dylib
+IceBoxStorefront.dll
+IceBoxStorefront.so
+IceBoxStorefront.dylib
+libIceBoxStorefront.so
+libIceBoxStorefront.dylib
 
 # --- Valve's files. These must NEVER be committed anywhere. -----------------
 # The Steamworks SDK is licensed to each developer personally and

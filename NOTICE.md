@@ -47,8 +47,8 @@ Linux     redistributable_bin/linux64/libsteam_api.so
 macOS     redistributable_bin/osx/libsteam_api.dylib
 ```
 
-Put it in the plugin folder, next to `Steam.dll` / `Steam.so` / `Steam.dylib`. That is
-the one location all three dynamic loaders agree on.
+Put it in the plugin folder, next to `IceBoxStorefront.dll` / `IceBoxStorefront.so` /
+`IceBoxStorefront.dylib`. That is the one location all three dynamic loaders agree on.
 
 ## Shipping the runtime inside your own game is fine
 

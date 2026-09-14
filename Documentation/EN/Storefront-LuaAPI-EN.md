@@ -73,8 +73,8 @@
 
 ## 1. Overview
 
-The Storefront plugin is a native C++ plugin (`Steam.dll` / `Steam.so` / `Steam.dylib`) that links against the
-**Steamworks SDK**. When the engine loads it, the plugin:
+The Storefront plugin is a native C++ plugin (`IceBoxStorefront.dll` / `IceBoxStorefront.so` /
+`IceBoxStorefront.dylib`) that links against the **Steamworks SDK**. When the engine loads it, the plugin:
 
 1. Resolves your Steam **AppId** (see [Configuring your AppId](#configuring-your-appid)).
 2. Initializes `SteamAPI` and verifies the local user is logged in to the Steam client.
@@ -101,12 +101,12 @@ overlay invite dialogs) sit on top.
 ### Where the plugin lives
 
 Like every IceBox plugin, the Storefront plugin is a folder under your project's `Plugins/` directory. It is
-named `Steam`, after the backend it provides, and the engine identifies it by that name:
+named `IceBoxStorefront`, and the engine identifies it by that name:
 
 ```
 Plugins/
-└── Steam/
-    ├── Steam.dll            ← the compiled plugin (platform-specific, from the release)
+└── IceBoxStorefront/
+    ├── IceBoxStorefront.dll ← the compiled plugin (platform-specific, from the release)
     ├── steam_api64.dll      ← Steamworks runtime (you copy this here, from Valve)
     ├── plugin.json          ← plugin manifest
     ├── VisualScriptAPI.json ← node catalog (required at run time)
@@ -117,8 +117,9 @@ Plugins/
 The engine auto-discovers the folder, loads it when enabled, calls `OnUpdate` every frame, and binds the
 `Storefront` table into Lua. You enable/disable plugins from the editor's **Plugins** panel.
 
-> **The Steam runtime library.** It sits in the plugin folder, right next to `Steam.dll` / `Steam.so` /
-> `Steam.dylib`, on **all three desktop platforms** — that is the one location every dynamic loader agrees on.
+> **The Steam runtime library.** It sits in the plugin folder, right next to `IceBoxStorefront.dll` /
+> `IceBoxStorefront.so` / `IceBoxStorefront.dylib`, on **all three desktop platforms** — that is the one location
+> every dynamic loader agrees on.
 > On Windows the plugin loads it from there explicitly; on Linux the plugin carries an `$ORIGIN` RPATH; on macOS
 > `libsteam_api.dylib` is built with the install name `@loader_path/libsteam_api.dylib` and *must* sit beside the
 > library that links it. The engine picks a plugin's library by matching its name against the plugin, so the
@@ -149,9 +150,9 @@ folder once:
 | macOS | `libsteam_api.dylib` | `redistributable_bin/osx/` |
 
 The headers and the import library matter only to whoever compiles the plugin, and that is not you: the plugin
-arrives already built. When **shipping your game**, the compiled `Steam` library and that runtime travel inside
-your package — which Section 1.1 of your own agreement with Valve permits, because they go out together with your
-application.
+arrives already built. When **shipping your game**, the compiled `IceBoxStorefront` library and that runtime
+travel inside your package — which Section 1.1 of your own agreement with Valve permits, because they go out
+together with your application.
 
 > **Minimum SDK version: v1.65.** The plugin uses `ISteamUtils::IsRunningOnSteamHardware()`,
 > `GetSteamHardwareDefaultConfig()` and `IsRunningUnderProton()`, which arrived in v1.65 together with the removal
@@ -165,7 +166,7 @@ At load time the plugin resolves the Steam AppId from the first source that yiel
 2. **`steam_config.json` in the plugin's own folder** — a JSON file with an `"AppId"` field. The engine tells the
    plugin where it was loaded from, so this works no matter what the folder is called or whether the plugin lives
    in the engine's or the project's `Plugins/`.
-3. **`Plugins/Steam/steam_config.json`**, relative to the working directory.
+3. **`Plugins/IceBoxStorefront/steam_config.json`**, relative to the working directory.
 4. **`steam_config.json`** in the working directory.
 5. **`steam_appid.txt`** (a plain text file containing only the number), looked up in the same three places.
 
@@ -244,17 +245,17 @@ The editor's **Tools → Build Game** stages your project's `Plugins/` folder in
 compiled plugin binaries on top. A few things are worth knowing:
 
 - **`Config/Plugins.json` decides what actually loads.** A plugin that is present but not listed as enabled there
-  is discovered and ignored. Enable **Steam** once in the editor's Plugins panel — that writes the file, and the
-  build copies it. Without it your shipped game has the plugin on disk and no Steam integration at all.
+  is discovered and ignored. Enable **IceBoxStorefront** once in the editor's Plugins panel — that writes the file,
+  and the build copies it. Without it your shipped game has the plugin on disk and no Steam integration at all.
 - **`steam_appid.txt` must not ship.** It tells Steam "assume this AppId, no launch check needed", which is exactly
   what you want on your machine and exactly what you do not want in a release. Keep it next to the built
   executable during testing, and delete it from the package you upload.
 - **The Steam runtime library travels with the plugin.** `steam_api64.dll` / `libsteam_api.so` /
-  `libsteam_api.dylib` is deployed into the plugin folder next to `Steam.dll`/`.so`/`.dylib` on every desktop
-  platform, which is the only location all three dynamic loaders agree on. Do not move it.
+  `libsteam_api.dylib` is deployed into the plugin folder next to `IceBoxStorefront.dll`/`.so`/`.dylib` on every
+  desktop platform, which is the only location all three dynamic loaders agree on. Do not move it.
 - **Everything else in the plugin folder ships too**, including `Documentation/`. Nothing breaks if you leave it,
   but it is roughly 400 KB of markdown you probably do not want in a release — delete it from the staged output
-  (or from your project's `Plugins/Steam/`) if package size matters. `LICENSE.txt`, `NOTICE.md` and
+  (or from your project's `Plugins/IceBoxStorefront/`) if package size matters. `LICENSE.txt`, `NOTICE.md` and
   `THIRD_PARTY_NOTICES.txt` stay: the last one is what satisfies the attribution sol2, Lua, nlohmann/json and fmt
   require, and it is a few kilobytes.
 
@@ -267,7 +268,7 @@ the answer there is short: **no**.
 
 | | Goes out with your **game** | Goes out to another **developer** |
 |---|---|---|
-| `Steam.dll` / `.so` / `.dylib` (the plugin) | ✅ required | 🚫 no — send them the download link |
+| `IceBoxStorefront.dll` / `.so` / `.dylib` (the plugin) | ✅ required | 🚫 no — send them the download link |
 | `plugin.json`, `VisualScriptAPI.json`, `icon.png` | ✅ required | 🚫 no |
 | `LICENSE.txt`, `NOTICE.md`, `THIRD_PARTY_NOTICES.txt` | ✅ keep them in the folder | — |
 | `Documentation/`, `README.md` | optional | — |

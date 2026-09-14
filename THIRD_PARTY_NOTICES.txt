@@ -20,7 +20,8 @@ Section 3, and the IceBoxEngine Plugin SDK, in Section 4.
 1. MIT LICENSE
 ========================================================================
 Compiled into the plugin library. All four are header-based, so their code
-ends up inside Steam.dll / Steam.so / Steam.dylib:
+ends up inside IceBoxStorefront.dll / IceBoxStorefront.so /
+IceBoxStorefront.dylib:
 
 - sol2 (C++ Lua binding; the whole Storefront Lua API is written against it)
   Copyright (c) 2013-2022 Rapptz, ThePhD, and contributors

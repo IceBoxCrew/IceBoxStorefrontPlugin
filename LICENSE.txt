@@ -62,11 +62,11 @@ differently.
 --------------------------------------------------------------------------------
 
 "Plugin" and "Software" mean the IceBoxStorefront Plugin as we supply it:
-the compiled plugin library (Steam.dll, Steam.so or Steam.dylib),
-plugin.json, VisualScriptAPI.json, icon.png, the contents of
-Documentation/, README.md, NOTICE.md, DISTRIBUTION.md, this License,
-THIRD_PARTY_NOTICES.txt, and every other file we author and supply in the
-package or in the public repository - except for what Section 3 excludes.
+the compiled plugin library (IceBoxStorefront.dll, IceBoxStorefront.so or
+IceBoxStorefront.dylib), plugin.json, VisualScriptAPI.json, icon.png, the
+contents of Documentation/, README.md, NOTICE.md, DISTRIBUTION.md, this
+License, THIRD_PARTY_NOTICES.txt, and every other file we author and supply in
+the package or in the public repository - except for what Section 3 excludes.
 
 "Your Game" means an interactive software application that You develop with
 IceBoxEngine and distribute to end users, in which the Plugin is one
@@ -116,8 +116,8 @@ THIRD_PARTY_NOTICES.txt that are compiled into the Plugin.
     licensed to you by this document. Section 5 applies to it.
 
 3.2 The Engine is not part of the Software. IceBoxEngine is proprietary
-    software licensed separately by IceBoxCrew Studio under the IceBox
-    Engine License Agreement. Nothing here grants you any right in it.
+    software licensed separately by IceBoxCrew Studio under the
+    IceBoxEngine License Agreement. Nothing here grants you any right in it.
     Section 8 applies.
 
 3.3 The Third-Party Components are not part of the Software. Each remains

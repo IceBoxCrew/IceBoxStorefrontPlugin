@@ -25,13 +25,13 @@ the icon, the documentation and the legal texts — so a clone is a plugin folde
 
 ## Install
 
-**1 — Unzip into `Plugins/`.** The archive already contains a folder named `Steam`, so unpacking it into
-your engine's `Plugins/` (available to every project) or a project's `Plugins/` (that project only) puts it
-exactly where it belongs. **Do not rename the folder**: the engine identifies the plugin by that name.
+**1 — Unzip into `Plugins/`.** The archive already contains a folder named `IceBoxStorefront`, so unpacking
+it into your engine's `Plugins/` (available to every project) or a project's `Plugins/` (that project only)
+puts it exactly where it belongs. **Do not rename the folder**: the engine identifies the plugin by that name.
 
 **2 — Add Valve's runtime.** Download the Steamworks SDK from
 [partner.steamgames.com/doc/sdk](https://partner.steamgames.com/doc/sdk) and copy **one file** out of it
-into the plugin folder, next to `Steam.dll` / `Steam.so` / `Steam.dylib`:
+into the plugin folder, next to `IceBoxStorefront.dll` / `IceBoxStorefront.so` / `IceBoxStorefront.dylib`:
 
 | Platform | File | From |
 | --- | --- | --- |
@@ -63,8 +63,8 @@ same folder is never mistaken for the plugin itself.
 one run. During development, keep a `steam_appid.txt` holding the same number next to the built game —
 and delete it from the release.
 
-**4 — Enable it.** In the editor: **Tools → Plugins & Mods**, tick **Steam**. The `Storefront` table
-appears in Lua and the nodes appear in the Visual Script editor. Nothing else to configure.
+**4 — Enable it.** In the editor: **Tools → Plugins & Mods**, tick **IceBoxStorefront**. The `Storefront`
+table appears in Lua and the nodes appear in the Visual Script editor. Nothing else to configure.
 
 ## Documentation
 
@@ -93,9 +93,10 @@ without Steam. Guard with `Storefront.IsAvailable()` when you want to branch.
 
 ## What is in the plugin folder
 
-- `Steam.dll` / `Steam.so` / `Steam.dylib` — the plugin, from the release archive. **Required.**
-- `plugin.json` — the manifest. The engine identifies the plugin by its `Name`, which is `Steam`.
-  **Required.**
+- `IceBoxStorefront.dll` / `IceBoxStorefront.so` / `IceBoxStorefront.dylib` — the plugin, from the release
+  archive. **Required.**
+- `plugin.json` — the manifest. The engine identifies the plugin by its `Name`, which is
+  `IceBoxStorefront`. **Required.**
 - `VisualScriptAPI.json` — the node catalog. The editor loads it from the plugin folder and shows every
   `Storefront` function as a node. It looks generated, and it is, but it is a **required run-time data
   file** — a build without it silently loses every `Storefront` node.
@@ -120,8 +121,8 @@ Things that are easy to get wrong and produce no error when you do — the full 
 [`DISTRIBUTION.md`](DISTRIBUTION.md):
 
 - **Enable the plugin in `Config/Plugins.json`.** The engine discovers every plugin folder but loads only
-  the ones listed as enabled. Ticking **Steam** in the editor writes that file, and **Tools → Build Game**
-  copies it. Without it your game ships the plugin and never loads it.
+  the ones listed as enabled. Ticking **IceBoxStorefront** in the editor writes that file, and
+  **Tools → Build Game** copies it. Without it your game ships the plugin and never loads it.
 - **Do not ship `steam_appid.txt`.** It tells Steam to skip the launch check — right on your machine
   during testing, wrong in a release. `steam_config.json` *does* ship; that is where your game reads its
   AppId from.
