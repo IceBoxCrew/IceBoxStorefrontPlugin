@@ -19,7 +19,7 @@ Steam Deck / Steam Machine / Steam Frame support.
 ## Get it
 
 Download the release archive for **your platform and your engine version** from
-[Releases](https://github.com/IceBoxCrew/IceBoxStorefrontPlugin/releases) or from itch.io. This repository
+[Releases](https://github.com/IceBoxCrew/IceBoxStorefront/releases) or from itch.io. This repository
 holds everything the plugin folder needs *except* the compiled library — the manifest, the node catalog,
 the icon, the documentation and the legal texts — so a clone is a plugin folder waiting for one file.
 
